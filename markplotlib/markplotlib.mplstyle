@@ -178,25 +178,25 @@ lines.solid_capstyle:  round  # {butt, round, projecting}
 #boxplot.flierprops.marker:          o
 #boxplot.flierprops.markerfacecolor: none
 #boxplot.flierprops.markeredgecolor: black
-#boxplot.flierprops.markeredgewidth: 1.0
+boxplot.flierprops.markeredgewidth: 0.5
 #boxplot.flierprops.markersize:      6
 #boxplot.flierprops.linestyle:       none
 #boxplot.flierprops.linewidth:       1.0
 
 #boxplot.boxprops.color:     black
-#boxplot.boxprops.linewidth: 1.0
+boxplot.boxprops.linewidth: 0.5
 #boxplot.boxprops.linestyle: -
 
 #boxplot.whiskerprops.color:     black
-#boxplot.whiskerprops.linewidth: 1.0
+boxplot.whiskerprops.linewidth: 0.5
 #boxplot.whiskerprops.linestyle: -
 
 #boxplot.capprops.color:     black
-#boxplot.capprops.linewidth: 1.0
+boxplot.capprops.linewidth: 0.5
 #boxplot.capprops.linestyle: -
 
 #boxplot.medianprops.color:     C1
-#boxplot.medianprops.linewidth: 1.0
+boxplot.medianprops.linewidth: 0.5
 #boxplot.medianprops.linestyle: -
 
 #boxplot.meanprops.color:           C2
@@ -205,7 +205,7 @@ lines.solid_capstyle:  round  # {butt, round, projecting}
 #boxplot.meanprops.markeredgecolor: C2
 #boxplot.meanprops.markersize:       6
 #boxplot.meanprops.linestyle:       --
-#boxplot.meanprops.linewidth:       1.0
+boxplot.meanprops.linewidth:       0.75
 
 
 ## ***************************************************************************
@@ -378,7 +378,7 @@ axes.labelsize:     12  # font size of the x and y labels
 #axes.labelpad:      4.0     # space between label and axis
 #axes.labelweight:   normal  # weight of the x and y labels
 #axes.labelcolor:    black
-#axes.axisbelow:     line    # draw axis gridlines and ticks:
+axes.axisbelow:     True    # draw axis gridlines and ticks:
                              #     - below patches (True)
                              #     - above patches but below lines ('line')
                              #     - above all (False)
@@ -410,7 +410,7 @@ axes.spines.right:  False
 
 #axes.unicode_minus: True  # use Unicode for the minus symbol rather than hyphen.  See
                            # https://en.wikipedia.org/wiki/Plus_and_minus_signs#Character_codes
-#axes.prop_cycle: cycler('color', ['1f77b4', 'ff7f0e', '2ca02c', 'd62728', '9467bd', '8c564b', 'e377c2', '7f7f7f', 'bcbd22', '17becf'])
+axes.prop_cycle: cycler('color', ['1f77b4', 'ff7f0e', '2ca02c', 'd62728', '9467bd', '8c564b', 'e377c2', '7f7f7f', 'bcbd22', '17becf'])
                   # color cycle for plot lines as list of string color specs:
                   # single letter, long name, or web-style hex
                   # As opposed to all other parameters in this file, the color
@@ -584,8 +584,8 @@ figure.dpi:         150       # figure dots per inch
 #figure.constrained_layout.use: False  # When True, automatically make plot
                                        # elements fit on the figure. (Not
                                        # compatible with `autolayout`, above).
-#figure.constrained_layout.h_pad:  0.04167  # Padding around axes objects. Float representing
-#figure.constrained_layout.w_pad:  0.04167  # inches. Default is 3/72 inches (3 points)
+figure.constrained_layout.h_pad:  0.1 #0.04167  # Padding around axes objects. Float representing
+figure.constrained_layout.w_pad:  0.1 #0.04167  # inches. Default is 3/72 inches (3 points)
 #figure.constrained_layout.hspace: 0.02     # Space between subplot groups. Float representing
 #figure.constrained_layout.wspace: 0.02     # a fraction of the subplot widths being separated.
 
