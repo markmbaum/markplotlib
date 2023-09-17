@@ -6,7 +6,13 @@ from typing import List
 
 style.use(join(dirname(abspath(__file__)), "markplotlib.mplstyle"))
 
-__all__ = ["ylabel_top", "restore_spines"]
+__all__ = [
+    "ylabel_top",
+    "restore_spines",
+    "rotate_ticklabels",
+    "rotate_xticklabels",
+    "rotate_yticklabels",
+]
 
 
 def ylabel_top(ax: Axes, label: str) -> None:
@@ -26,3 +32,20 @@ def restore_spines(ax: Axes, spines: List[str] = ["left", "top"]) -> None:
     for spine in spines:
         ax.spines[spine].set_visible(True)
     return None
+
+
+def rotate_ticklabels(ax: Axes, rotation: float = 90, axis: str = "x") -> None:
+    assert axis in ("x", "y")
+    if axis == "x":
+        ax.set_xticklabels(ax.get_xticklabels(), rotation=rotation, ha="center")
+    else:
+        ax.set_yticklabels(ax.get_yticklabels(), rotation=rotation, va="center")
+    return None
+
+
+def rotate_xticklabels(ax: Axes, rotation: float = 90) -> None:
+    return rotate_ticklabels(ax, rotation, axis="x")
+
+
+def rotate_yticklabels(ax: Axes, rotation: float = 90) -> None:
+    return rotate_ticklabels(ax, rotation, axis="y")
